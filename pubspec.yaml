@@ -2,7 +2,7 @@ name: ios_smooth_page_indicator
 description: "A new Flutter project."
 
 version: 0.0.1+1
-homepage: https://github.com/aramix/nxp-originality-verifier
+homepage: https://github.com/Hpetrosyan99/ios_smooth_page_indicator/blob/main/lib/src/ios_smooth_indicator.dart
 
 environment:
   sdk: '>=3.4.4 <4.0.0'
