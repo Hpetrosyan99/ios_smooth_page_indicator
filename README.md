@@ -1,4 +1,3 @@
-IosSmoothPageIndicator
 IosSmoothPageIndicator is a customizable and easy-to-use page indicator widget designed to replicate the smooth and stylish page indicators commonly seen in iOS applications. This widget is built for Flutter and provides a modern and flexible solution for managing page indicators in your Flutter apps.
 
 Features
