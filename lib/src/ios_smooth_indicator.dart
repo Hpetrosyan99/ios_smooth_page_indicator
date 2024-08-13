@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:flutter/services.dart';
 
-class IosSmoothPageIndicator extends StatelessWidget {
+class IosSmoothPageIndicator extends StatefulWidget {
   final int dotIndex;
   final int dotsCount;
   final Color dotColor;
@@ -34,50 +34,67 @@ class IosSmoothPageIndicator extends StatelessWidget {
   });
 
   @override
+  State<IosSmoothPageIndicator> createState() => _IosSmoothPageIndicatorState();
+}
+
+class _IosSmoothPageIndicatorState extends State<IosSmoothPageIndicator> {
+  late int _currentIndex;
+
+  @override
+  void initState() {
+    super.initState();
+    _currentIndex = widget.dotIndex;
+  }
+
+  @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onPanUpdate: (details) async {
-        final effectiveDotWidth = dotWidth + dotSpacing;
-        final tappedIndex =
-            (details.localPosition.dx / effectiveDotWidth).floor();
+        final effectiveDotWidth = widget.dotWidth + widget.dotSpacing;
+        final tappedIndex = (details.localPosition.dx / effectiveDotWidth).floor();
 
-        if (tappedIndex >= 0 && tappedIndex < dotsCount) {
-          if (enableHapticFeedback && tappedIndex != dotIndex) {
+        if (tappedIndex >= 0 && tappedIndex < widget.dotsCount) {
+          if (widget.enableHapticFeedback && tappedIndex != _currentIndex) {
             await HapticFeedback.lightImpact();
           }
-          onDotTapped(tappedIndex);
-          carouselController?.jumpToPage(tappedIndex);
-          onPageChanged?.call(tappedIndex);
+          if (tappedIndex != _currentIndex) {
+            widget.onDotTapped(tappedIndex);
+            widget.carouselController?.jumpToPage(tappedIndex);
+            widget.onPageChanged?.call(tappedIndex);
+            setState(() {
+              _currentIndex = tappedIndex;
+            });
+          }
         }
       },
       child: Container(
         padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(50),
-          color: dotBackgroundColor,
+          color: widget.dotBackgroundColor,
         ),
         child: SmoothPageIndicator(
-          controller: PageController(initialPage: dotIndex),
-          count: dotsCount,
+          controller: PageController(initialPage: widget.dotIndex),
+          count: widget.dotsCount,
           effect: ScaleEffect(
-            dotWidth: dotWidth,
-            spacing: dotSpacing,
-            dotHeight: dotHeight,
-            dotColor: dotColor,
-            activeDotColor: activeDotColor,
+            dotWidth: widget.dotWidth,
+            spacing: widget.dotSpacing,
+            dotHeight: widget.dotHeight,
+            dotColor: widget.dotColor,
+            activeDotColor: widget.activeDotColor,
             strokeWidth: 50,
           ),
           onDotClicked: (index) {
-            if (enableHapticFeedback) {
+            if (widget.enableHapticFeedback) {
               HapticFeedback.lightImpact();
             }
-            carouselController?.animateToPage(index,
+            widget.carouselController?.animateToPage(index,
                 duration: const Duration(
                   milliseconds: 300,
                 ),
                 curve: Curves.easeIn);
-            onDotTapped(index);
-            onPageChanged?.call(index);
+            widget.onDotTapped(index);
+            widget.onPageChanged?.call(index);
           },
         ),
       ),
