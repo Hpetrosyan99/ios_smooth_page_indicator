@@ -51,7 +51,8 @@ class _IosSmoothPageIndicatorState extends State<IosSmoothPageIndicator> {
     return GestureDetector(
       onPanUpdate: (details) async {
         final effectiveDotWidth = widget.dotWidth + widget.dotSpacing;
-        final tappedIndex = (details.localPosition.dx / effectiveDotWidth).floor();
+        final tappedIndex =
+            (details.localPosition.dx / effectiveDotWidth).floor();
 
         if (tappedIndex >= 0 && tappedIndex < widget.dotsCount) {
           if (widget.enableHapticFeedback && tappedIndex != _currentIndex) {
