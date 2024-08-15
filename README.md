@@ -1,13 +1,23 @@
+# IosSmoothPageIndicator
+
+[![pub package](https://img.shields.io/badge/pub-1.0.4+1-blue)](https://pub.dev/packages/ios_smooth_page_indicator)
+
 IosSmoothPageIndicator is a customizable and easy-to-use page indicator widget designed to replicate the smooth and stylish page indicators commonly seen in iOS applications. This widget is built for Flutter and provides a modern and flexible solution for managing page indicators in your Flutter apps.
 
-Features
-Customizable Appearance: Easily modify the dot color, active dot color, dot size, spacing, and background color to fit your app’s design.
-Haptic Feedback Support: Optionally enable haptic feedback when the user interacts with the dots, providing a more tactile user experience.
-Smooth Animation: The widget provides a smooth animation effect for transitioning between pages, enhancing the overall UX.
-Page Controller Integration: Seamlessly integrates with Flutter's PageController to update the page indicator as the user scrolls.
-Dot Tap Support: Users can tap on any dot to navigate directly to the corresponding page.
-Lightweight and Efficient: Designed to be lightweight, ensuring minimal impact on app performance.
-Usage
+## Features
+* Customizable Appearance: Easily modify the dot color, active dot color, dot size, spacing, and background color to fit your app’s design.
+
+* Haptic Feedback Support: Optionally enable haptic feedback when the user interacts with the dots, providing a more tactile user experience.
+
+* Smooth Animation: The widget provides a smooth animation effect for transitioning between pages, enhancing the overall UX.
+
+* Page Controller Integration: Seamlessly integrates with Flutter's PageController to update the page indicator as the user scrolls.
+
+* Dot Tap Support: Users can tap on any dot to navigate directly to the corresponding page.
+
+* Lightweight and Efficient: Designed to be lightweight, ensuring minimal impact on app performance.
+
+## Usage
 ````
 IosSmoothPageIndicator(
 currentIndex: _currentIndex,
@@ -43,7 +53,7 @@ Add the following to your pubspec.yaml:
 
 ````
 dependencies:
-ios_smooth_page_indicator: ^1.0.2
+ios_smooth_page_indicator: ^1.0.4+1
 ````
 Then, run flutter pub get to install the package.
 
