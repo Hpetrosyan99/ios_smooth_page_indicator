@@ -7,6 +7,7 @@ Smooth Animation: The widget provides a smooth animation effect for transitionin
 Page Controller Integration: Seamlessly integrates with Flutter's PageController to update the page indicator as the user scrolls.
 Dot Tap Support: Users can tap on any dot to navigate directly to the corresponding page.
 Lightweight and Efficient: Designed to be lightweight, ensuring minimal impact on app performance.
+
 Usage
 ````
 IosSmoothPageIndicator(
