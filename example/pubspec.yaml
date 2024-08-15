@@ -1,8 +1,22 @@
-name: ios_smooth_page_indicator
-description: IosSmoothPageIndicator is a customizable and easy-to-use page indicator widget designed to replicate the smooth and stylish page indicators commonly seen in iOS applications.
+name: example
+description: IosSmoothPageIndicator is a customizable and easy-to-use page indicator widget designed to replicate the smooth and stylish page indicators commonly seen in iOS applications. This widget is built for Flutter and provides a modern and flexible solution for managing page indicators in your Flutter apps.
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none'
 
-version: 1.0.6+1
-homepage: https://github.com/Hpetrosyan99/ios_smooth_page_indicator/blob/main/lib/src/ios_smooth_indicator.dart
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
 
 environment:
   sdk: '>=3.4.4 <4.0.0'
@@ -16,8 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-  smooth_page_indicator: ^1.2.0+3
+  ios_smooth_page_indicator: ^1.0.4+1
   carousel_slider: ^5.0.0
 
 
@@ -48,9 +61,13 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+     - assets/images/image_1.jpg
+     - assets/images/image_2.jpg
+     - assets/images/image_3.jpg
+     - assets/images/image_4.jpg
+     - assets/images/image_5.jpg
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
