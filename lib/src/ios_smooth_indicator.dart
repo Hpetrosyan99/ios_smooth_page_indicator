@@ -3,10 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:flutter/services.dart';
 
+/// Creates an [IosSmoothPageIndicator].
+///
+/// The [carouselController] is required to control the linked carousel,
+/// and [dotsCount] defines the total number of pages.
 class IosSmoothPageIndicator extends StatefulWidget {
   final int dotIndex;
   final int dotsCount;
   final Color dotColor;
+  /// The color of the dot that represents the active page.
+  ///
+  /// This is the color that the dot will be when the associated page is
+  /// currently selected in the carousel.
   final Color activeDotColor;
   final Color dotBackgroundColor;
   final double dotWidth;
@@ -14,6 +22,10 @@ class IosSmoothPageIndicator extends StatefulWidget {
   final double dotSpacing;
   final ValueChanged<int> onDotTapped;
   final Function(int)? onPageChanged;
+  /// The [carouselController] that this indicator is linked to.
+  ///
+  /// This controller is used to animate the carousel to the tapped position
+  /// when the user interacts with the indicator.
   final CarouselSliderController? carouselController;
   final bool enableHapticFeedback;
 
@@ -85,6 +97,10 @@ class _IosSmoothPageIndicatorState extends State<IosSmoothPageIndicator> {
             activeDotColor: widget.activeDotColor,
             strokeWidth: 50,
           ),
+          /// Animates the carousel to the page that corresponds to the tapped indicator dot.
+          ///
+          /// This method is triggered when the user taps on one of the dots in the
+          /// page indicator.
           onDotClicked: (index) {
             if (widget.enableHapticFeedback) {
               HapticFeedback.lightImpact();

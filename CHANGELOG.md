@@ -1,3 +1,7 @@
+# v1.0.7
+
+Added API Documentation
+
 # v1.0.2
 
 Bug fixes
