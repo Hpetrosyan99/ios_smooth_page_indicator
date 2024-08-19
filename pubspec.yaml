@@ -1,7 +1,7 @@
 name: ios_smooth_page_indicator
 description: IosSmoothPageIndicator is a customizable and easy-to-use page indicator widget designed to replicate the smooth and stylish page indicators commonly seen in iOS applications.
 
-version: 1.0.6+1
+version: 1.0.7+1
 homepage: https://github.com/Hpetrosyan99/ios_smooth_page_indicator/blob/main/lib/src/ios_smooth_indicator.dart
 
 environment:
@@ -35,6 +35,10 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^3.0.0
+
+linter:
+    rules:
+      public_member_api_docs: true
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
