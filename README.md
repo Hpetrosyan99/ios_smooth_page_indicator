@@ -1,6 +1,6 @@
 # IosSmoothPageIndicator
 
-[![pub package](https://img.shields.io/badge/pub-1.0.7+1-blue)](https://pub.dev/packages/ios_smooth_page_indicator)
+[![pub package](https://img.shields.io/badge/pub-1.0.8-blue)](https://pub.dev/packages/ios_smooth_page_indicator)
 
 IosSmoothPageIndicator is a customizable and easy-to-use page indicator widget designed to replicate the smooth and stylish page indicators commonly seen in iOS applications. This widget is built for Flutter and provides a modern and flexible solution for managing page indicators in your Flutter apps.
 
@@ -53,7 +53,7 @@ Add the following to your pubspec.yaml:
 
 ````
 dependencies:
-ios_smooth_page_indicator: ^1.0.6+1
+ios_smooth_page_indicator: ^1.0.8
 ````
 Then, run flutter pub get to install the package.
 
