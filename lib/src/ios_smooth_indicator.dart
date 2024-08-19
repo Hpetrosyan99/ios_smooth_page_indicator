@@ -11,6 +11,7 @@ class IosSmoothPageIndicator extends StatefulWidget {
   final int dotIndex;
   final int dotsCount;
   final Color dotColor;
+
   /// The color of the dot that represents the active page.
   ///
   /// This is the color that the dot will be when the associated page is
@@ -22,6 +23,7 @@ class IosSmoothPageIndicator extends StatefulWidget {
   final double dotSpacing;
   final ValueChanged<int> onDotTapped;
   final Function(int)? onPageChanged;
+
   /// The [carouselController] that this indicator is linked to.
   ///
   /// This controller is used to animate the carousel to the tapped position
@@ -97,6 +99,7 @@ class _IosSmoothPageIndicatorState extends State<IosSmoothPageIndicator> {
             activeDotColor: widget.activeDotColor,
             strokeWidth: 50,
           ),
+
           /// Animates the carousel to the page that corresponds to the tapped indicator dot.
           ///
           /// This method is triggered when the user taps on one of the dots in the
