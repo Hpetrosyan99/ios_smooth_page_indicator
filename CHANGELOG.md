@@ -1,3 +1,7 @@
+# v1.1.0
+
+Fixed gesture bugs
+
 # v1.0.9
 
 Optimisation
