@@ -4,10 +4,7 @@
 
 IosSmoothPageIndicator is a customizable and easy-to-use page indicator widget designed to replicate the smooth and stylish page indicators commonly seen in iOS applications. This widget is built for Flutter and provides a modern and flexible solution for managing page indicators in your Flutter apps.
 
-![dots_gesture](https://github.com/user-attachments/assets/907aead2-6165-44e8-85a0-73a756370609)
-
-![slider_gesture](https://github.com/user-attachments/assets/9f9fc398-b7a4-4b84-b6a8-12198e65f998)
-
+![dots_gesture](https://github.com/user-attachments/assets/907aead2-6165-44e8-85a0-73a756370609)  ![slider_gesture](https://github.com/user-attachments/assets/9f9fc398-b7a4-4b84-b6a8-12198e65f998)
 
 ## Features
 * Customizable Appearance: Easily modify the dot color, active dot color, dot size, spacing, and background color to fit your app’s design.
