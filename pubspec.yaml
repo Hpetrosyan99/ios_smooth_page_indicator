@@ -1,7 +1,7 @@
 name: ios_smooth_page_indicator
 description: IosSmoothPageIndicator is a customizable and easy-to-use page indicator widget designed to replicate the smooth and stylish page indicators commonly seen in iOS applications.
 
-version: 1.0.8
+version: 1.0.9
 homepage: https://github.com/Hpetrosyan99/ios_smooth_page_indicator/blob/main/lib/src/ios_smooth_indicator.dart
 
 environment:
