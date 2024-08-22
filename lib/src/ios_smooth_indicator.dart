@@ -53,6 +53,7 @@ class IosSmoothPageIndicator extends StatefulWidget {
 
 class _IosSmoothPageIndicatorState extends State<IosSmoothPageIndicator> {
   late int _currentIndex;
+  double _startDx = 0.0;
 
   @override
   void initState() {
@@ -63,18 +64,27 @@ class _IosSmoothPageIndicatorState extends State<IosSmoothPageIndicator> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onPanStart: (details) {
+        _startDx = details.localPosition.dx;
+      },
       onPanUpdate: (details) async {
-        final effectiveDotWidth = widget.dotWidth + widget.dotSpacing;
-        final tappedIndex =
-            (details.localPosition.dx / effectiveDotWidth).round();
-        if (tappedIndex >= 0 && tappedIndex < widget.dotsCount) {
-          if (tappedIndex != _currentIndex) {
+        final dxDiff = details.localPosition.dx - _startDx;
+        // Set a threshold for swiping to differentiate between scroll and tap
+        if (dxDiff.abs() < 10) {
+          final effectiveDotWidth = widget.dotWidth + widget.dotSpacing;
+          final tappedIndex =
+              (details.localPosition.dx / effectiveDotWidth).round();
+
+          if (tappedIndex >= 0 &&
+              tappedIndex < widget.dotsCount &&
+              tappedIndex != _currentIndex) {
             if (widget.enableHapticFeedback) {
               await HapticFeedback.lightImpact();
             }
             widget.onDotTapped(tappedIndex);
             widget.carouselController?.jumpToPage(tappedIndex);
             widget.onPageChanged?.call(tappedIndex);
+
             setState(() {
               _currentIndex = tappedIndex;
             });

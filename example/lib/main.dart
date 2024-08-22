@@ -53,34 +53,43 @@ class _DashboardState extends State<Dashboard> {
       appBar: AppBar(
         title: const Text('IosSmoothPageIndicator'),
       ),
-      body: Column(
-        children: [
-          const SizedBox(
-            height: 20,
-          ),
-          CarouselSlider(
-            items: sliderItems,
-            carouselController: carouselController,
-            options: CarouselOptions(
-              onPageChanged: (index, reason) {
-                onImageSlide(index);
-              },
-              enlargeFactor: 0.35,
-              enableInfiniteScroll: false,
-              viewportFraction: 0.5,
-              enlargeCenterPage: true,
-              enlargeStrategy: CenterPageEnlargeStrategy.zoom,
+      body: CustomScrollView(
+        slivers: [
+          SliverFillRemaining(
+            child: Column(
+              children: [
+                const SizedBox(
+                  height: 20,
+                ),
+                CarouselSlider(
+                  items: sliderItems,
+                  carouselController: carouselController,
+                  options: CarouselOptions(
+                    onPageChanged: (index, reason) {
+                      onImageSlide(index);
+                    },
+                    enlargeFactor: 0.35,
+                    enableInfiniteScroll: false,
+                    viewportFraction: 0.5,
+                    enlargeCenterPage: true,
+                    enlargeStrategy: CenterPageEnlargeStrategy.zoom,
+                  ),
+                ),
+                const SizedBox(
+                  height: 40,
+                ),
+                AbsorbPointer(
+                  absorbing: false,
+                  child: IosSmoothPageIndicator(
+                      dotIndex: dotsIndex,
+                      dotsCount: sliderItems.length,
+                      dotBackgroundColor: Colors.grey.withOpacity(0.2),
+                      onPageChanged: onImageSlide,
+                      onDotTapped: (_) {}),
+                ),
+              ],
             ),
           ),
-          const SizedBox(
-            height: 40,
-          ),
-          IosSmoothPageIndicator(
-              dotIndex: dotsIndex,
-              dotsCount: sliderItems.length,
-              dotBackgroundColor: Colors.grey.withOpacity(0.2),
-              onPageChanged: onImageSlide,
-              onDotTapped: (_) {}),
         ],
       ),
     );
