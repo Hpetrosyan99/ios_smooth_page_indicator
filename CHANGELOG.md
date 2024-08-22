@@ -1,3 +1,11 @@
+# v1.1.3
+
+Performance and other improvements
+
+# v1.1.2
+
+Fixed bugs
+
 # v1.1.0
 
 Fixed gesture bugs
