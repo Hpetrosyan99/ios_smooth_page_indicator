@@ -1,3 +1,7 @@
+# v1.1.4
+
+Performance and other improvements
+
 # v1.1.3
 
 Performance and other improvements
