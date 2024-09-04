@@ -87,10 +87,10 @@ packages:
     dependency: "direct main"
     description:
       name: ios_smooth_page_indicator
-      sha256: "0551e0c5a825f4f8384cdde6589b5a7c8f4d4ed435ede32e734a24b6c2021371"
+      sha256: "00a42047ac7a591db7bc9d48d69118b6589675d9ef43029ec4d934ad56150035"
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.4+1"
+    version: "1.1.5"
   leak_tracker:
     dependency: transitive
     description:
@@ -233,5 +233,5 @@ packages:
     source: hosted
     version: "14.2.5"
 sdks:
-  dart: ">=3.4.4 <4.0.0"
+  dart: ">=3.3.0 <4.0.0"
   flutter: ">=3.18.0-18.0.pre.54"

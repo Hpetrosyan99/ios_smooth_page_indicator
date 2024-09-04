@@ -55,7 +55,7 @@ Add the following to your pubspec.yaml:
 
 ````
 dependencies:
-ios_smooth_page_indicator: ^1.1.4
+ios_smooth_page_indicator: ^1.1.5
 ````
 Then, run flutter pub get to install the package.
 

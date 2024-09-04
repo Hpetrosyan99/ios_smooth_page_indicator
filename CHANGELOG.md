@@ -1,5 +1,9 @@
 # v1.1.4
 
+Platform support changes
+
+# v1.1.4
+
 Performance and other improvements
 
 # v1.1.3
