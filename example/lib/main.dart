@@ -83,7 +83,7 @@ class _DashboardState extends State<Dashboard> {
                   child: IosSmoothPageIndicator(
                       dotIndex: dotsIndex,
                       dotsCount: sliderItems.length,
-                      dotBackgroundColor: Colors.grey.withOpacity(0.2),
+                      dotBackgroundColor: Colors.grey.withValues(alpha: 0.2),
                       onPageChanged: onImageSlide,
                       onDotTapped: (_) {}),
                 ),
